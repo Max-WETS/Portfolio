@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+$font-stack: 'Nunito', sans-serif;
+$font-color: black;
+$primary-color: #6481b3;
+$secondary-color: white;
+
+html, body {
+  height:100%;
+}
+
+html {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+body {
+  font: 100% $font-stack;
+  color: $font-color;
+  background-color: $primary-color;
+  margin: 0;
+}
+
+a object{
+  pointer-events: none;
+}

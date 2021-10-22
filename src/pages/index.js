@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "../styles/style.scss";
+import "../styles/index.scss";
+import Portfolio from "./Portfolio";
 
 const primaryColor = "white";
 
@@ -22,13 +23,7 @@ const IndexPage = () => {
   }, []);
 
   return (
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-      </head>
+    <>
       {isLoading ? (
         <body>
           <nav>
@@ -86,11 +81,9 @@ const IndexPage = () => {
           </nav>
         </body>
       ) : (
-        <body>
-          <h1>My Portfolio</h1>
-        </body>
-      )}
-    </html>
+        <Portfolio />
+      )}{" "}
+    </>
   );
 };
 
