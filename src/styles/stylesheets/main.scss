@@ -1,0 +1,64 @@
+main {
+  margin-left: 4%;
+  margin-right: 4%;
+  height: 40%;
+  margin-top: 5rem;
+}
+
+.bio-container {
+    width: 65%;
+    margin:auto;
+    margin-top: 7rem;
+}
+
+.bio-container p {
+    margin: 5px 0px 5px 0px;
+    animation-name: fadeIn-slideIn;
+    animation-duration: 1.5s;
+}
+
+@keyframes fadeIn-slideIn {
+  0%   { margin-top:3%; opacity: 0;}
+  100% { margin-top:0%; opacity: 1;}
+}
+
+.bio-container p:first-child {
+    color: $secondary-color;
+}
+
+.bio-container p:nth-child(2), p:nth-child(3) {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.bio-container p:nth-child(2) {
+    color: $font-color; 
+}
+
+.bio-container p:nth-child(3), p:nth-child(4) {
+    color: $fourth-color;
+}
+
+.bio-container p:nth-child(4) a {
+    color: $secondary-color;
+    text-decoration: none;
+    position: relative;
+}
+
+.bio-container p:nth-child(4) a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 1px;
+  left: 1px;
+  background-color: $secondary-color;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.bio-container p:nth-child(4) a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}

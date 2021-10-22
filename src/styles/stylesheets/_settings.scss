@@ -5,6 +5,7 @@ $font-color: black;
 $primary-color: #6481b3;
 $secondary-color: white;
 $tertiary-color: #9094ad;
+$fourth-color: #35373d;
 
 html, body {
   height:100%;
@@ -15,21 +16,10 @@ body {
   color: $font-color;
   background-color: $primary-color;
   margin: 0;
-  height: 200vh;
+  height: calc(100% - 6rem);
 }
 
 a object{
   pointer-events: none;
 }
 
-main {
-  margin-left: 3%;
-  margin-right: 3%;
-  height: 100%;
-  margin-top: 5rem;
-}
-
-main h1 {
-  margin: auto;
-  text-align: center;
-}
