@@ -6,20 +6,22 @@ const primaryColor = "white";
 
 // markup
 const IndexPage = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [isLoadingStarted, setIsLoadingStarted] = useState(false);
   const [isLoadingEnding, setIsLoadingEnding] = useState(false);
 
   useEffect(() => {
-    setIsLoadingStarted(true);
+    if (isLoading) {
+      setIsLoadingStarted(true);
 
-    setTimeout(() => {
-      setIsLoadingEnding(true);
-    }, 3000);
+      setTimeout(() => {
+        setIsLoadingEnding(true);
+      }, 3000);
 
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 5000);
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 5000);
+    }
   }, []);
 
   return (
