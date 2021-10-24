@@ -10,7 +10,11 @@ function Main() {
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,
           debitis nostrum. Fuga enim delectus quidem, ipsam velit ad provident
-          nisi nemo eum! Id, ipsa sit <a href="">Ultima</a>.
+          nisi nemo eum! Id, ipsa sit{" "}
+          <a class="link-style" href="">
+            Ultima
+          </a>
+          .
         </p>
       </div>
     </main>

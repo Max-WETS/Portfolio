@@ -23,3 +23,26 @@ a object{
   pointer-events: none;
 }
 
+.link-style:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 1px;
+  left: 1px;
+  background-color: $secondary-color;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.link-style:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.line {
+  height: 1px;
+  background: $tertiary-color;
+}
+
