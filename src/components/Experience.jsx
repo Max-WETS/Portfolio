@@ -6,6 +6,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Experience() {
   const [currentExperience, setCurrentExperience] = useState(0);
 
+  useEffect(() => {
+    document.documentElement.style.setProperty(
+      "--h",
+      currentExperience * 3 + "rem"
+    );
+  }, [currentExperience]);
+
   const handleClickExperience = (e) => {
     setCurrentExperience(e.target.value);
   };

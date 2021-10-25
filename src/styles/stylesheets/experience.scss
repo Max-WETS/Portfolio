@@ -1,3 +1,7 @@
+:root {
+    --h: 0;
+}
+
 .experience-container {
     margin-top: 30%;
     width: 65%;
@@ -46,6 +50,7 @@
 }
 
 .company-list ul {
+    position: relative;
     padding: 0;
     margin: 0;
     display: flex;
@@ -53,6 +58,18 @@
     justify-content: space-between;
     box-sizing: content-box;
     border-left: solid 1px $tertiary-color;
+}
+
+.company-list ul::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 3rem;
+    top: 0;
+    left: 0;
+    background-color: $secondary-color;
+    transition: transform 0.3s ease;
+    transform: translateY(var(--h));
 }
 
 .company-list li {
