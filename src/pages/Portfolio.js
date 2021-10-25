@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import Main from "../components/Main";
 import About from "../components/About";
+import Experience from "../components/Experience";
 
 function Portfolio() {
   return (
@@ -9,6 +10,7 @@ function Portfolio() {
       <Header />
       <Main />
       <About />
+      <Experience />
     </>
   );
 }

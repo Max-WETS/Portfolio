@@ -1,9 +1,3 @@
-article {
-    margin-left: 4%;
-  margin-right: 4%;
-  height: 70vh;
-}
-
 .about-container {
     width: 65%;
     height: 100%;
@@ -50,6 +44,8 @@ article {
 .list-container {
     display: flex;
     flex-direction: row;
+    font-size: 0.92rem;
+    letter-spacing: 0.08rem;
 }
 
 .list-container svg {

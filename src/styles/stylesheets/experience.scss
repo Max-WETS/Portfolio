@@ -1,0 +1,124 @@
+.experience-container {
+    margin-top: 30%;
+    width: 65%;
+    height: 100%;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+    color: $fourth-color;
+}
+
+.experience-title p {
+    color: $font-color;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.experience-title span {
+    color: $secondary-color;
+}
+
+.experience-title div {
+    color: $tertiary-color;
+    width: 35%;
+    margin-left: 1rem;
+}
+
+.experience-content {
+    width: 100%;
+    height: 80%;
+    padding-bottom: 25%;
+    display: flex;
+    flex-direction: row;
+}
+
+.company-list {
+    width: 15%;
+    height: 100%;
+}
+
+.company-list ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: content-box;
+    border-left: solid 1px $tertiary-color;
+}
+
+.company-list li {
+    list-style-type: none;
+    height: 3rem;
+    width: 6.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $fourth-color;
+    font-family: 600;
+    font-size: 0.92rem;
+    letter-spacing: 0.03rem;
+    cursor: pointer;
+}
+
+.company-list li:hover {
+    color: $secondary-color;
+    background-color: #7997c7;
+}
+
+.active-li {
+    background-color: #7997c7;
+}
+
+.job-info {
+    width: 85%;
+    height: 100%;
+    margin-left: 1.5rem;
+}
+
+.job-info p:first-child {
+    margin-top: 0.65rem;
+    margin-bottom: 0.2rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.job-info p:first-child span {
+    color: $secondary-color;
+}
+
+.job-info a {
+    color: $secondary-color;
+    text-decoration: none;
+    position: relative;
+}
+
+.job-info p:nth-child(2) {
+    color: $fourth-color;
+    font-size: 0.92rem;
+    letter-spacing: 0.03rem;
+    margin-top: 0;
+}
+
+.job-info ul {
+    padding: 0;
+    margin-left: 1rem;
+    color: $fourth-color;
+}
+
+.job-info li {
+    margin-bottom: 0.5rem;
+}
+
+.job-info svg {
+    color: $secondary-color;
+    margin-top: 2px;
+}

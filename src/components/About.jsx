@@ -1,7 +1,6 @@
 import React from "react";
-import { BiUpArrow } from "react-icons/bi";
 
-import { faAngleRight, faHome } from "@fortawesome/free-solid-svg-icons";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function About() {
