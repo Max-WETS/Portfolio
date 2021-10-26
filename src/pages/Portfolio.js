@@ -4,6 +4,7 @@ import Main from "../components/Main";
 import About from "../components/About";
 import Experience from "../components/Experience";
 import Work from "../components/Work";
+import ProjectsGrid from "../components/ProjectsGrid";
 
 function Portfolio() {
   return (
@@ -13,6 +14,7 @@ function Portfolio() {
       <About />
       <Experience />
       <Work />
+      <ProjectsGrid />
     </>
   );
 }
