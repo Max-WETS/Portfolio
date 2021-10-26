@@ -48,9 +48,11 @@ a object{
 }
 
 article {
-    margin-left: 4%;
+  margin-left: 4%;
   margin-right: 4%;
   height: 80vh;
   padding: 10vh 0 10vh 0;
+  display: flex;
+  justify-content: center;
 }
 

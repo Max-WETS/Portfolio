@@ -1,0 +1,48 @@
+.contact-container {
+    width: 70%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container p:first-child {
+    color: $secondary-color;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.contact-container p:nth-child(2) {
+    color: $font-color;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.contact-container p:nth-child(3) {
+    margin-top: 0.9rem;
+    color: $fourth-color;
+    margin-bottom: 2rem;
+}
+
+.contact-container div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    height: 3rem;
+    border: solid 1px $secondary-color;
+    border-radius: 5%;
+    color: $secondary-color;
+}
+
+.contact-container a {
+    text-decoration: none;
+    position: relative;
+}
+
+.contact-container a:hover {
+    background-color: $tertiary-color;
+}

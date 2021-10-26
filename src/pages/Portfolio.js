@@ -5,6 +5,7 @@ import About from "../components/About";
 import Experience from "../components/Experience";
 import Work from "../components/Work";
 import ProjectsGrid from "../components/ProjectsGrid";
+import Contact from "../components/Contact";
 
 function Portfolio() {
   return (
@@ -15,6 +16,7 @@ function Portfolio() {
       <Experience />
       <Work />
       <ProjectsGrid />
+      <Contact />
     </>
   );
 }
