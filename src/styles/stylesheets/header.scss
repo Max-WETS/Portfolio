@@ -102,3 +102,31 @@
     box-shadow: -8px 10px 20px -16px #363434;
 }
 
+// hamburger menu
+
+@media(max-width: 700px) {
+    .nav-menu {
+        display: none;
+    }
+    #hamburger {
+        display: block;
+    }
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  padding: 0.3rem;
+}
+.bar1,
+.bar2,
+.bar3 {
+  width: 30px;
+  height: 4px;
+  background-color: $secondary-color;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  transition: 0.4s;
+  border-radius: 7px;
+}
+

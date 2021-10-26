@@ -14,7 +14,7 @@ function Header() {
       setDirection("up");
     }
     oldScrollY = window.scrollY;
-    console.log("oldScrollY: ", oldScrollY);
+    // console.log("oldScrollY: ", oldScrollY);
   };
 
   useEffect(() => {
@@ -68,6 +68,11 @@ function Header() {
           </svg>
         </div>
       </a>
+      <nav className="hamburger-menu" id="hamburger">
+        <div className="bar1"></div>
+        <div className="bar2"></div>
+        <div className="bar3"></div>
+      </nav>
       <nav class="nav-menu">
         <div class="menu-items">
           <div id="about">
