@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Main from "../components/Main";
 import About from "../components/About";
@@ -7,10 +7,10 @@ import Work from "../components/Work";
 import ProjectsGrid from "../components/ProjectsGrid";
 import Contact from "../components/Contact";
 
-function Portfolio() {
+function Portfolio({ menuOpen, setMenuOpen }) {
   return (
     <>
-      <Header />
+      <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Main />
       <About />
       <Experience />

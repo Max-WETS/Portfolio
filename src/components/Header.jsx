@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function Header() {
+function Header({ menuOpen, setMenuOpen }) {
   let oldScrollY = 0;
 
   const [direction, setDirection] = useState("up");
@@ -23,6 +23,10 @@ function Header() {
       window.removeEventListener("scroll", controlDirection);
     };
   }, []);
+
+  const handleClickHamburgerMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
     <div
@@ -68,11 +72,34 @@ function Header() {
           </svg>
         </div>
       </a>
-      <nav className="hamburger-menu" id="hamburger">
-        <div className="bar1"></div>
-        <div className="bar2"></div>
-        <div className="bar3"></div>
-      </nav>
+      <div class="menu-wrap">
+        {/* <input type="checkbox" class="toggler" /> */}
+        <div
+          id="hamburger"
+          class={menuOpen ? "hamburger hamburger-open" : "hamburger"}
+          onClick={handleClickHamburgerMenu}
+        >
+          <div></div>
+        </div>
+        <div class={menuOpen ? "menu menu-open" : "menu"}>
+          <div>
+            <ul>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Experience</a>
+              </li>
+              <li>
+                <a href="#">Work</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <nav class="nav-menu">
         <div class="menu-items">
           <div id="about">

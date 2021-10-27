@@ -9,6 +9,20 @@ const IndexPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isLoadingStarted, setIsLoadingStarted] = useState(false);
   const [isLoadingEnding, setIsLoadingEnding] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const htmlElement = document.getElementsByTagName("html")[0];
+  const hamburgerElement = document.getElementById("hamburger");
+
+  useEffect(() => {
+    if (menuOpen) {
+      htmlElement.classList.add("html-menu-open");
+      hamburgerElement.classList.add("hamburger-visible");
+    } else {
+      htmlElement.classList.remove("html-menu-open");
+      hamburgerElement.classList.remove("hamburger-visible");
+    }
+  }, [menuOpen]);
 
   useEffect(() => {
     if (isLoading) {
@@ -26,8 +40,8 @@ const IndexPage = () => {
 
   return (
     <>
-      {isLoading ? (
-        <body>
+      <div className="body-overlay">
+        {isLoading ? (
           <nav>
             <div className="logo-container">
               <div class="logo">
@@ -81,10 +95,10 @@ const IndexPage = () => {
               </div>
             </div>
           </nav>
-        </body>
-      ) : (
-        <Portfolio />
-      )}{" "}
+        ) : (
+          <Portfolio menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        )}{" "}
+      </div>
     </>
   );
 };
