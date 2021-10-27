@@ -85,16 +85,24 @@ function Header({ menuOpen, setMenuOpen }) {
           <div>
             <ul>
               <li>
-                <a href="#">About</a>
+                <a href="#about" onClick={handleClickHamburgerMenu}>
+                  About
+                </a>
               </li>
               <li>
-                <a href="#">Experience</a>
+                <a href="#experience" onClick={handleClickHamburgerMenu}>
+                  Experience
+                </a>
               </li>
               <li>
-                <a href="#">Work</a>
+                <a href="#work" onClick={handleClickHamburgerMenu}>
+                  Work
+                </a>
               </li>
               <li>
-                <a href="#">Contact</a>
+                <a href="#contact" onClick={handleClickHamburgerMenu}>
+                  Contact
+                </a>
               </li>
             </ul>
           </div>
@@ -102,26 +110,34 @@ function Header({ menuOpen, setMenuOpen }) {
       </div>
       <nav class="nav-menu">
         <div class="menu-items">
-          <div id="about">
-            <p>
-              <span>01.</span> About
-            </p>
-          </div>
-          <div id="experience">
-            <p>
-              <span>02.</span> Experience
-            </p>
-          </div>
-          <div id="work">
-            <p>
-              <span>03.</span> Work
-            </p>
-          </div>
-          <div id="contact">
-            <p>
-              <span>04.</span> Contact
-            </p>
-          </div>
+          <a href="#about">
+            <div id="about-menu">
+              <p>
+                <span>01.</span> About
+              </p>
+            </div>
+          </a>
+          <a href="#experience">
+            <div id="experience-menu">
+              <p>
+                <span>02.</span> Experience
+              </p>
+            </div>
+          </a>
+          <a href="#work">
+            <div id="work-menu">
+              <p>
+                <span>03.</span> Work
+              </p>
+            </div>
+          </a>
+          <a href="#contact">
+            <div id="contact-menu">
+              <p>
+                <span>04.</span> Contact
+              </p>
+            </div>
+          </a>
         </div>
         <a
           href=""

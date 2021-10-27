@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function About() {
   return (
-    <article>
+    <article id="about">
       <div class="about-container">
         <div className="about-text">
           <div>
