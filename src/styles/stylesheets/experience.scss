@@ -4,7 +4,8 @@
 
 .experience-container {
     margin-top: 30%;
-    width: 65%;
+    width: 90%;
+    max-width: 800px;
     height: 100%;
     margin:auto;
     display: flex;
@@ -138,4 +139,40 @@
 .job-info svg {
     color: $secondary-color;
     margin-top: 2px;
+}
+
+@media(max-width: 800px) {
+    .experience-container {
+        width: 100%;
+    }
+}
+
+@media(max-width: 650px) {
+    .experience-content {
+        flex-direction: column;
+    }
+
+    .company-list {
+        width: 100%;
+        height: max-content;
+        // overflow-x: auto;
+        
+    }
+
+    .company-list ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+        border-left: 0px;
+        border-bottom: solid 1px $tertiary-color;
+    }
+
+    .company-list ul::before {
+        top: 3rem;
+        left: 0;
+        width: 6.5rem;
+        height: 1px;
+        transform: translateY(0);
+        transform: translateX(var(--h));
+    }
 }

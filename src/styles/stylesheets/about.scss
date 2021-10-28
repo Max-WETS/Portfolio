@@ -1,7 +1,7 @@
 .about-container {
-    width: 65%;
+    width: 90%;
     height: 100%;
-    margin:auto;
+    // margin:auto;
     display: flex;
     flex-direction: row;
 }
@@ -123,5 +123,20 @@ img {
 
 .image-overlay:hover::before {
     transform: translate(-0.5vw, -0.5vw);
+}
+
+@media(max-width: 950px) {
+    .about-text div:first-child div {
+        width: 40%;
+    }
+}
+
+@media(max-width: 750px) {
+    .about-picture {
+        display: none;
+    }
+    .about-text {
+        width: 100%;
+    }
 }
 

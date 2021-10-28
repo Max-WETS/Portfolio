@@ -1,16 +1,69 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import experienceData from "../experienceData";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Experience() {
   const [currentExperience, setCurrentExperience] = useState(0);
+  const breakingPoint = 650;
+  const lastSize = useRef();
+  const newSize = useRef();
+  const translateRatio = useRef();
+  translateRatio.current = 3 / 6.5;
+
+  const checkWindowResize = useCallback(() => {
+    newSize.current = window.innerWidth;
+
+    const isEqual = newSize.current === lastSize.current;
+    const hasIncreased = newSize.current > lastSize.current;
+
+    if (!isEqual) {
+      const lowerPoint = hasIncreased ? lastSize.current : newSize.current;
+      const higherPoint = hasIncreased ? newSize.current : lastSize.current;
+
+      const distBreakingPoint = breakingPoint - lowerPoint;
+      const distNewPoint = higherPoint - lowerPoint;
+
+      if (distBreakingPoint <= distNewPoint && distBreakingPoint > 0) {
+        const currentTranslateValue = parseFloat(
+          document.documentElement.style.getPropertyValue("--h")
+        );
+        if (hasIncreased) {
+          document.documentElement.style.setProperty(
+            "--h",
+            currentTranslateValue * translateRatio.current + "rem"
+          );
+        } else {
+          document.documentElement.style.setProperty(
+            "--h",
+            currentTranslateValue / translateRatio.current + "rem"
+          );
+        }
+      }
+    }
+
+    lastSize.current = newSize.current;
+    // }
+  }, []);
 
   useEffect(() => {
-    document.documentElement.style.setProperty(
-      "--h",
-      currentExperience * 3 + "rem"
-    );
+    window.addEventListener("resize", checkWindowResize);
+  }, []);
+
+  useEffect(() => {
+    let viewportWidth = window.innerWidth;
+
+    if (viewportWidth > breakingPoint) {
+      document.documentElement.style.setProperty(
+        "--h",
+        currentExperience * 3 + "rem"
+      );
+    } else {
+      document.documentElement.style.setProperty(
+        "--h",
+        currentExperience * 6.5 + "rem"
+      );
+    }
   }, [currentExperience]);
 
   const handleClickExperience = (e) => {

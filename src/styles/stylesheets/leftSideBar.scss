@@ -36,3 +36,9 @@
     background-color: $font-color;
     height: 7rem;
 }
+
+@media(max-width: 750px) {
+    .left-menu-container {
+        display: none;
+    }
+}
