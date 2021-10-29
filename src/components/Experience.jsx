@@ -3,7 +3,7 @@ import experienceData from "../experienceData";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function Experience() {
+function Experience({ experienceElement }) {
   const [currentExperience, setCurrentExperience] = useState(0);
   const breakingPoint = 650;
   const lastSize = useRef();
@@ -25,6 +25,7 @@ function Experience() {
       const distNewPoint = higherPoint - lowerPoint;
 
       if (distBreakingPoint <= distNewPoint && distBreakingPoint > 0) {
+        document.documentElement.style.setProperty("--transition", "0.0s");
         const currentTranslateValue = parseFloat(
           document.documentElement.style.getPropertyValue("--h")
         );
@@ -42,6 +43,7 @@ function Experience() {
       }
     }
 
+    // document.documentElement.style.setProperty("--transition", "0.3s");
     lastSize.current = newSize.current;
     // }
   }, []);
@@ -52,6 +54,10 @@ function Experience() {
 
   useEffect(() => {
     let viewportWidth = window.innerWidth;
+    if (
+      document.documentElement.style.getPropertyValue("--transition") === "0s"
+    )
+      document.documentElement.style.setProperty("--transition", "0.3s");
 
     if (viewportWidth > breakingPoint) {
       document.documentElement.style.setProperty(
@@ -72,7 +78,7 @@ function Experience() {
 
   return (
     <article id="experience">
-      <div className="experience-container">
+      <div className="experience-container" ref={experienceElement}>
         <div className="experience-title">
           <p>
             <span>02.</span> Where I've Worked

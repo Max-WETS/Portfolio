@@ -1,5 +1,6 @@
 :root {
     --h: 0;
+    --transition: 0.3s;
 }
 
 .experience-container {
@@ -69,7 +70,7 @@
     top: 0;
     left: 0;
     background-color: $secondary-color;
-    transition: transform 0.3s ease;
+    transition: transform var(--transition) ease;
     transform: translateY(var(--h));
 }
 
@@ -155,8 +156,6 @@
     .company-list {
         width: 100%;
         height: max-content;
-        // overflow-x: auto;
-        
     }
 
     .company-list ul {
@@ -175,4 +174,5 @@
         transform: translateY(0);
         transform: translateX(var(--h));
     }
+
 }

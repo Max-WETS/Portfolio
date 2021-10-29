@@ -5,9 +5,9 @@ import { FiGithub } from "react-icons/fi";
 import { IoMdOpen } from "react-icons/io";
 import projectsData from "../projectsData";
 
-function ProjectsGrid() {
+function ProjectsGrid({ projectsElement }) {
   return (
-    <div className="projects-grid-section">
+    <div className="projects-grid-section" ref={projectsElement}>
       <div className="projects-container">
         <div className="projects-title">
           <p>Other Noteworthy Projects</p>

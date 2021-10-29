@@ -3,10 +3,10 @@ import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FiGithub } from "react-icons/fi";
 
-function Work() {
+function Work({ workElement }) {
   return (
     <article id="work">
-      <div className="work-container">
+      <div className="work-container" ref={workElement}>
         <div className="work-title">
           <p>
             <span>03.</span> Some Things I've Built

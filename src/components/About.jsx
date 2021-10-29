@@ -3,10 +3,10 @@ import React from "react";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function About() {
+function About({ aboutElement }) {
   return (
     <article id="about">
-      <div class="about-container">
+      <div class="about-container" ref={aboutElement}>
         <div className="about-text">
           <div>
             <p>

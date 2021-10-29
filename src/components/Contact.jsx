@@ -1,9 +1,9 @@
 import React from "react";
 
-function Contact() {
+function Contact({ contactElement }) {
   return (
     <article id="contact">
-      <div className="contact-container">
+      <div className="contact-container" ref={contactElement}>
         <p>04. What's Next?</p>
         <p>Get In Touch</p>
         <p>
