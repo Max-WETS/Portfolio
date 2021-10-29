@@ -1,6 +1,7 @@
 import React from "react";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FiGithub } from "react-icons/fi";
 
 function Work() {
   return (
@@ -13,6 +14,9 @@ function Work() {
           <div class="line"></div>
         </div>
         <div className="work-content">
+          <div className="work-image-overlay" id="work-image-overlay">
+            <img src="../maxweb-fit.png" alt="" />
+          </div>
           <div className="work-picture">
             <div className="work-picture-container">
               <div className="work-image-overlay">
@@ -41,7 +45,16 @@ function Work() {
             </div>
             <div className="links-list">
               <div>
-                <FontAwesomeIcon icon={faExternalLinkAlt} />
+                <a href="">
+                  <div>
+                    <FiGithub fontSize="20px" />
+                  </div>
+                </a>
+                <a href="">
+                  <div>
+                    <FontAwesomeIcon icon={faExternalLinkAlt} size="1x" />
+                  </div>
+                </a>
               </div>
             </div>
           </div>
