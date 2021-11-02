@@ -36,7 +36,7 @@ const IndexPage = () => {
         setIsLoading(false);
       }, 5000);
     }
-  }, []);
+  }, [isLoading]);
 
   const handleClickHamburgerMenu = () => {
     setMenuOpen(!menuOpen);
@@ -74,7 +74,7 @@ const IndexPage = () => {
                     cy="25"
                     fill="none"
                     stroke={primaryColor}
-                    stroke-width="3px"
+                    strokeWidth="3px"
                     className={
                       isLoadingStarted ? "filled loading-circle" : "filled"
                     }
@@ -86,7 +86,7 @@ const IndexPage = () => {
                     x2="5"
                     y2="25"
                     stroke={primaryColor}
-                    stroke-width="3px"
+                    strokeWidth="3px"
                     pathLength="1"
                     className={
                       isLoadingStarted ? "filled loading-circle" : "filled"
@@ -96,7 +96,7 @@ const IndexPage = () => {
                     d="M10 25 L20 11 L21.5 23 L31 11 L34 25 M40 25 L30 39 L27 27 L18 39 L15 24"
                     fill="none"
                     stroke={primaryColor}
-                    stroke-width="3px"
+                    strokeWidth="3px"
                     className={isLoadingStarted ? "loading-text" : null}
                   />
                 </svg>

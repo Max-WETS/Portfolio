@@ -5,15 +5,20 @@ import { GrMail } from "react-icons/gr";
 
 function LeftSideBar() {
   return (
-    <div class="left-menu-container">
+    <div className="left-menu-container">
       <div className="left-menu-bar">
         <div className="icons-container">
-          <a href="https://github.com/Max-WETS" target="_blank">
+          <a
+            href="https://github.com/Max-WETS"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FiGithub fontSize="25px" />
           </a>
           <a
             href="https://www.linkedin.com/in/maxime-wets-a039a911b/"
             target="_blank"
+            rel="noreferrer"
           >
             <AiFillLinkedin fontSize="25px" />
           </a>

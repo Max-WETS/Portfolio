@@ -14,8 +14,8 @@ function ProjectsGrid({ projectsElement }) {
         </div>
         <div className="projects-grid-container">
           <div className="grid-row">
-            {projectsData.map((p) => (
-              <div className="grid-item">
+            {projectsData.map((p, i) => (
+              <div className="grid-item" key={i}>
                 <div className="item-grid-content">
                   <div className="item-grid-content-header">
                     <div>
@@ -51,8 +51,8 @@ function ProjectsGrid({ projectsElement }) {
                       <p>{p.desc}</p>
                     </div>
                     <div className="technology-list">
-                      {p.technologies.map((t) => (
-                        <div>{t}</div>
+                      {p.technologies.map((t, i) => (
+                        <div key={i}>{t}</div>
                       ))}
                     </div>
                   </div>

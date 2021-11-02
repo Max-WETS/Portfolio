@@ -6,13 +6,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function About({ aboutElement }) {
   return (
     <article id="about">
-      <div class="about-container" ref={aboutElement}>
+      <div className="about-container" ref={aboutElement}>
         <div className="about-text">
           <div>
             <p>
               <span>01.</span> About Me
             </p>
-            <div class="line"></div>
+            <div className="line"></div>
           </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic ad
@@ -23,7 +23,7 @@ function About({ aboutElement }) {
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ut
             consequuntur, error rerum voluptas{" "}
-            <a class="link-style" href="">
+            <a className="link-style" href="">
               voluptates
             </a>
             , non sapiente ipsa sint accusantium iure eaque fugit adipisci
@@ -31,7 +31,7 @@ function About({ aboutElement }) {
           </p>
           <p>
             Lorem ipsum dolor sit, amet{" "}
-            <a class="link-style" href="">
+            <a className="link-style" href="">
               consectetur adipisicing
             </a>{" "}
             elit. Atque iste dolores amet id? Vel fugiat debitis quidem
@@ -41,7 +41,7 @@ function About({ aboutElement }) {
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil,
             quisquam:
           </p>
-          <div class="list-container">
+          <div className="list-container">
             <ul className="fa-ul">
               <li>
                 <FontAwesomeIcon icon={faAngleRight} listItem />

@@ -43,14 +43,12 @@ function Experience({ experienceElement }) {
       }
     }
 
-    // document.documentElement.style.setProperty("--transition", "0.3s");
     lastSize.current = newSize.current;
-    // }
   }, []);
 
   useEffect(() => {
     window.addEventListener("resize", checkWindowResize);
-  }, []);
+  }, [checkWindowResize]);
 
   useEffect(() => {
     let viewportWidth = window.innerWidth;
@@ -83,7 +81,7 @@ function Experience({ experienceElement }) {
           <p>
             <span>02.</span> Where I've Worked
           </p>
-          <div class="line"></div>
+          <div className="line"></div>
         </div>
         <div className="experience-content">
           <div className="company-list">
@@ -105,7 +103,10 @@ function Experience({ experienceElement }) {
               {experienceData[currentExperience].jobTitle}{" "}
               <span>
                 @{" "}
-                <a class="link-style" href="">
+                <a
+                  className="link-style"
+                  href={experienceData[currentExperience].url}
+                >
                   {experienceData[currentExperience].company}
                 </a>
               </span>
@@ -115,10 +116,10 @@ function Experience({ experienceElement }) {
               {experienceData[currentExperience].endingDate}
             </p>
             <ul className="fa-ul">
-              {experienceData[currentExperience].jobInfo.map((i) => (
-                <li>
+              {experienceData[currentExperience].jobInfo.map((job, i) => (
+                <li key={i}>
                   <FontAwesomeIcon icon={faAngleRight} listItem />
-                  {i}
+                  {job}
                 </li>
               ))}
             </ul>

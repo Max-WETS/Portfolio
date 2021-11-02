@@ -11,7 +11,7 @@ function Work({ workElement }) {
           <p>
             <span>03.</span> Some Things I've Built
           </p>
-          <div class="line"></div>
+          <div className="line"></div>
         </div>
         <div className="work-content">
           <div className="work-image-overlay" id="work-image-overlay">
@@ -30,7 +30,7 @@ function Work({ workElement }) {
             <div className="text-container">
               <p>
                 Lorem, ipsum dolor sit amet consectetur{" "}
-                <a class="link-style" href="">
+                <a className="link-style" href="">
                   adipisicing
                 </a>{" "}
                 elit. Quod, neque sit. Aliquid esse sed, aperiam quia facere, at

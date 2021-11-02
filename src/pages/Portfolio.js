@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Header from "../components/Header";
 import Main from "../components/Main";
 import About from "../components/About";
@@ -98,7 +98,11 @@ function Portfolio({ menuOpen, setMenuOpen }) {
           <footer>
             <div>
               <div>
-                <a href="https://github.com/Max-WETS" target="_blank">
+                <a
+                  href="https://github.com/Max-WETS"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FiGithub fontSize="25px" />
                 </a>
               </div>
@@ -106,6 +110,7 @@ function Portfolio({ menuOpen, setMenuOpen }) {
                 <a
                   href="https://www.linkedin.com/in/maxime-wets-a039a911b/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <AiFillLinkedin fontSize="25px" />
                 </a>

@@ -1,28 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 
 function Header({ menuOpen, setMenuOpen }) {
-  let oldScrollY = 0;
+  const oldScrollY = useRef(0);
 
   const [direction, setDirection] = useState("up");
 
-  const controlDirection = () => {
-    if (window.scrollY > oldScrollY) {
+  const controlDirection = useCallback(() => {
+    if (window.scrollY > oldScrollY.current) {
       setDirection("down");
-    } else if (window.scrollY < oldScrollY && oldScrollY < 30) {
+    } else if (window.scrollY < oldScrollY.current && oldScrollY.current < 30) {
       setDirection("top");
     } else {
       setDirection("up");
     }
-    oldScrollY = window.scrollY;
-    // console.log("oldScrollY: ", oldScrollY);
-  };
+    oldScrollY.current = window.scrollY;
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", controlDirection);
     return () => {
       window.removeEventListener("scroll", controlDirection);
     };
-  }, []);
+  }, [controlDirection]);
 
   const handleClickHamburgerMenu = () => {
     setMenuOpen(!menuOpen);
@@ -38,8 +37,8 @@ function Header({ menuOpen, setMenuOpen }) {
           : "header-container hidden-header"
       }
     >
-      <a href="">
-        <div class="logo-main">
+      <a href="http://localhost:8000/">
+        <div className="logo-main">
           <svg
             width="50"
             height="50"
@@ -52,7 +51,7 @@ function Header({ menuOpen, setMenuOpen }) {
               cy="25"
               fill="none"
               stroke="white"
-              stroke-width="3px"
+              strokeWidth="3px"
             />
             <line
               x1="46.4"
@@ -60,28 +59,27 @@ function Header({ menuOpen, setMenuOpen }) {
               x2="5"
               y2="25"
               stroke="white"
-              stroke-width="3px"
+              strokeWidth="3px"
               pathLength="1"
             />
             <path
               d="M10 25 L20 11 L21.5 23 L31 11 L34 25 M40 25 L30 39 L27 27 L18 39 L15 24"
               fill="none"
               stroke="white"
-              stroke-width="3px"
+              strokeWidth="3px"
             />
           </svg>
         </div>
       </a>
-      <div class="menu-wrap">
-        {/* <input type="checkbox" class="toggler" /> */}
+      <div className="menu-wrap">
         <div
           id="hamburger"
-          class={menuOpen ? "hamburger hamburger-open" : "hamburger"}
+          className={menuOpen ? "hamburger hamburger-open" : "hamburger"}
           onClick={handleClickHamburgerMenu}
         >
           <div></div>
         </div>
-        <div class={menuOpen ? "menu menu-open" : "menu"}>
+        <div className={menuOpen ? "menu menu-open" : "menu"}>
           <div>
             <ul>
               <li>
@@ -108,8 +106,8 @@ function Header({ menuOpen, setMenuOpen }) {
           </div>
         </div>
       </div>
-      <nav class="nav-menu">
-        <div class="menu-items">
+      <nav className="nav-menu">
+        <div className="menu-items">
           <a href="#about">
             <div id="about-menu">
               <p>
@@ -140,13 +138,13 @@ function Header({ menuOpen, setMenuOpen }) {
           </a>
         </div>
         <a
-          href=""
+          href="../resume.pdf"
           style={{
             textDecoration: "none",
             color: "black",
           }}
         >
-          <div class="resume-link">
+          <div className="resume-link">
             <p>Resume</p>
           </div>
         </a>
