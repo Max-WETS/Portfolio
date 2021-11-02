@@ -100,3 +100,17 @@ article {
   background: #555; 
 }
 
+.active-scroll {
+   
+  div, p {
+    animation-name: scrollSlideIn;
+    animation-duration: 1.0s;
+  }
+  
+}
+
+@keyframes scrollSlideIn {
+  0%   { top: 80px; opacity: 0;}
+  100% { top:0; opacity: 1;}
+}
+

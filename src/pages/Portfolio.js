@@ -12,90 +12,70 @@ import { AiFillLinkedin } from "react-icons/ai";
 import { GrMail } from "react-icons/gr";
 
 function Portfolio({ menuOpen, setMenuOpen }) {
-  const offsets = useRef();
   const aboutElement = useRef();
   const experienceElement = useRef();
   const workElement = useRef();
   const projectsElement = useRef();
   const contactElement = useRef();
+  const componentsList = useRef([]);
+  const offsets = useRef([]);
+  const scrolledByList = useRef([]);
 
   useEffect(() => {
-    const elements = [
+    const components = [
       aboutElement,
       experienceElement,
       workElement,
       projectsElement,
       contactElement,
     ];
-    const elementsOffset = [];
+
     const bodyRectTop = document.body.getBoundingClientRect().top;
-    for (let i = 0; i < elements.length; i++) {
-      const elementTop = elements[i].current.getBoundingClientRect().top;
+    for (let i = 0; i < components.length; i++) {
+      const elementTop = components[i].current.getBoundingClientRect().top;
       const offset = elementTop - bodyRectTop;
-      // console.log("bodyRectTop", bodyRectTop);
-      // console.log("elementTop", elementTop);
-      console.log("offset", offset);
-      elementsOffset.push(offset);
+
+      offsets.current[i] = offset;
+      componentsList.current[i] = components[i].current;
     }
-    offsets.current = elementsOffset;
   }, []);
 
   const ScrollControl = () => {
-    const scrollPosition = window.scrollY;
     const scrollTop = document.documentElement.scrollTop;
     const scrollBottom = window.innerHeight + scrollTop;
 
-    // console.log("oldScrollY: ", window.scrollY);
-    // console.log("mainElementYPos", mainElementTop);
-    // console.log("offsets array", offsets.current);
-    // console.log("scrollTop", scrollTop);
-    console.log("scrollBottom", scrollBottom);
+    if (componentsList.current.length > scrolledByList.current.length) {
+      for (let i = 0; i < offsets.current.length; i++) {
+        const componentInstance = componentsList.current[i];
+        const classList = Object.values(componentInstance.classList);
+        const alreadyScrolledBy = classList.includes("active-scroll");
 
-    for (let i = 0; i < offsets.current.length; i++) {
-      if (i < 4) {
-        if (
-          scrollBottom >= offsets.current[i] &&
-          scrollBottom < offsets.current[i + 1]
-        ) {
-          // console.log("scroll position", scrollPosition);
-          console.log(`element ${i + 1} reached`);
-        }
-      } else {
-        if (scrollBottom >= offsets.current[i]) {
-          console.log(`element ${i + 1} reached`);
+        if (i < 4) {
+          if (
+            scrollBottom >= offsets.current[i] &&
+            scrollBottom < offsets.current[i + 1] &&
+            !alreadyScrolledBy
+          ) {
+            componentInstance.classList.add("active-scroll");
+            scrolledByList.current.push(componentInstance);
+          }
+        } else {
+          if (scrollBottom >= offsets.current[i] && !alreadyScrolledBy) {
+            componentInstance.classList.add("active-scroll");
+            scrolledByList.current.push(componentInstance);
+          }
         }
       }
+    } else {
+      for (let component of componentsList.current) {
+        component.classList.remove("active-scroll");
+      }
     }
-
-    // if (
-    //   scrollPosition >= offsets.current[0] &&
-    //   scrollPosition < offsets.current[1]
-    // ) {
-    //   console.log("first element reached");
-    // } else if (
-    //   scrollPosition >= offsets.current[1] &&
-    //   scrollPosition < offsets.current[2]
-    // ) {
-    //   console.log("second element reached");
-    // } else if (
-    //   scrollPosition >= offsets.current[2] &&
-    //   scrollPosition < offsets.current[3]
-    // ) {
-    //   console.log("third element reached");
-    // } else if (
-    //   scrollPosition >= offsets.current[3] &&
-    //   scrollPosition < offsets.current[4]
-    // ) {
-    //   console.log("fourth element reached");
-    // } else if (
-    //   scrollPosition >= offsets.current[4] &&
-    //   scrollPosition < offsets.current[5]
-    // ) {
-    //   console.log("fifth element reached");
-    // }
   };
+
   useEffect(() => {
     window.addEventListener("scroll", ScrollControl);
+
     return () => {
       window.removeEventListener("scroll", ScrollControl);
     };
