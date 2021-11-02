@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/index.scss";
 import Portfolio from "./Portfolio";
+import Helmet from "react-helmet";
 
 const primaryColor = "white";
 
@@ -44,6 +45,9 @@ const IndexPage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Maxime Wets</title>
+      </Helmet>
       <div
         className={
           menuOpen ? "body-overlay body-overlay-menu-open" : "body-overlay"
