@@ -11,7 +11,7 @@ function Contact({ contactElement }) {
           praesentium suscipit maiores veritatis nulla. Possimus esse sunt sequi
           aliquid.
         </p>
-        <a href="">
+        <a href="mailto:wetsmaxime@gmail.com">
           <div>Say Hello</div>
         </a>
       </div>

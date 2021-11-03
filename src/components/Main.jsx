@@ -6,7 +6,7 @@ function Main() {
       <div className="bio-container">
         <p>Hi, my name is</p>
         <p>Maxime Wets.</p>
-        <p>I build things for the web.</p>
+        <p>I build many things for the web.</p>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,
           debitis nostrum. Fuga enim delectus quidem, ipsam velit ad provident
