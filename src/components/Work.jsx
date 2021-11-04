@@ -18,12 +18,12 @@ function Work({ workElement }) {
         </div>
         <div className="work-content">
           <div className="work-image-overlay" id="work-image-overlay">
-            <img src="maxweb-fit.png" alt="" />
+            <img src="images/maxweb-fit.png" alt="" />
           </div>
           <div className="work-picture">
             <div className="work-picture-container">
               <div className="work-image-overlay">
-                <img src="maxweb-fit.png" alt="" />
+                <img src="images/maxweb-fit.png" alt="" />
               </div>
             </div>
           </div>
