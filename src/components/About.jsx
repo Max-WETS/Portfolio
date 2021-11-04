@@ -1,7 +1,7 @@
 import React from "react";
-
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ProfilePic from "../images/pp-pro-fit.jpeg";
 
 function About({ aboutElement }) {
   return (
@@ -68,7 +68,7 @@ function About({ aboutElement }) {
         <div className="about-picture">
           <div className="picture-container">
             <div className="image-overlay">
-              <img src="images/pp-pro-fit.jpeg" alt="" />
+              <img src={ProfilePic} alt="Profile picture" />
             </div>
           </div>
         </div>

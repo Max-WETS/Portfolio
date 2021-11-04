@@ -3,6 +3,7 @@ import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FiGithub } from "react-icons/fi";
 import projectsData from "../projectsData";
+import MaxWebImg from "../images/maxweb-fit.png";
 
 function Work({ workElement }) {
   const [highlightedProject, setHighlightedProject] = useState(projectsData[1]);
@@ -18,12 +19,12 @@ function Work({ workElement }) {
         </div>
         <div className="work-content">
           <div className="work-image-overlay" id="work-image-overlay">
-            <img src="images/maxweb-fit.png" alt="" />
+            <img src={MaxWebImg} alt="MaxWeb social app screenshot" />
           </div>
           <div className="work-picture">
             <div className="work-picture-container">
               <div className="work-image-overlay">
-                <img src="images/maxweb-fit.png" alt="" />
+                <img src={MaxWebImg} alt="MaxWeb social app screenshot" />
               </div>
             </div>
           </div>
