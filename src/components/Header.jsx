@@ -104,7 +104,7 @@ function Header({ menuOpen, setMenuOpen }) {
               </li>
               <li>
                 <a
-                  href="../static/resume.pdf"
+                  href="../resume.pdf"
                   target="_blank"
                   rel="noreferrer"
                   style={{
@@ -159,7 +159,7 @@ function Header({ menuOpen, setMenuOpen }) {
           </a>
         </div>
         <a
-          href="../static/resume.pdf"
+          href="../resume.pdf"
           target="_blank"
           rel="noreferrer"
           style={{
