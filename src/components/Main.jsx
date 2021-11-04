@@ -6,15 +6,11 @@ function Main() {
       <div className="bio-container">
         <p>Hi, my name is</p>
         <p>Maxime Wets.</p>
-        <p>I build many things for the web.</p>
+        <p>Welcome to my Portfolio Website</p>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,
-          debitis nostrum. Fuga enim delectus quidem, ipsam velit ad provident
-          nisi nemo eum! Id, ipsa sit{" "}
-          <a className="link-style" href="">
-            Ultima
-          </a>
-          .
+          Here you'll find all the projects I designed and built. I'm working
+          mainly with Javascript and React to develop full stack applications at
+          the moment. Please be my guest and feel free to browse around.
         </p>
       </div>
     </main>

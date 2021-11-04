@@ -15,31 +15,24 @@ function About({ aboutElement }) {
             <div className="line"></div>
           </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic ad
-            similique neque asperiores provident, esse perspiciatis nihil
-            nesciunt rem consectetur quo voluptate, quasi ab expedita eaque
-            itaque qui maxime? Voluptate!
+            After graduating as a marine engineer, I set about focusing on the
+            technological and ecological aspects of the shipping industry
+            assuming a managing position in an environmental auditing company
+            for three and a half years.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ut
-            consequuntur, error rerum voluptas{" "}
-            <a className="link-style" href="">
-              voluptates
-            </a>
-            , non sapiente ipsa sint accusantium iure eaque fugit adipisci
-            ducimus eligendi ipsum enim, repellat doloribus!
+            This was a multi-faceted job which required you to strike the right
+            balance between customer satisfaction and technical expertise.
           </p>
           <p>
-            Lorem ipsum dolor sit, amet{" "}
-            <a className="link-style" href="">
-              consectetur adipisicing
-            </a>{" "}
-            elit. Atque iste dolores amet id? Vel fugiat debitis quidem
-            reprehenderit eos porro?
+            During those years, audits of big clients got me acquainted with a
+            wide array of cutting-edge monitoring tools and platforms. This
+            sparked a growing curiosity in me and it soon became crystal-clear
+            that new technologies were where I wanted to go.
           </p>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil,
-            quisquam:
+            You'll find below the latest technologies I've been working with in
+            building my projects:
           </p>
           <div className="list-container">
             <ul className="fa-ul">
@@ -63,11 +56,11 @@ function About({ aboutElement }) {
               </li>
               <li>
                 <FontAwesomeIcon icon={faAngleRight} listItem />
-                Eleventy
+                MongoDB
               </li>
               <li>
                 <FontAwesomeIcon icon={faAngleRight} listItem />
-                WordPress
+                Chakra-UI
               </li>
             </ul>
           </div>

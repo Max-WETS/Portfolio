@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FiGithub } from "react-icons/fi";
+import projectsData from "../projectsData";
 
 function Work({ workElement }) {
+  const [highlightedProject, setHighlightedProject] = useState(projectsData[1]);
+
   return (
     <article id="work">
       <div className="work-container" ref={workElement}>
         <div className="work-title">
           <p>
-            <span>03.</span> Some Things I've Built
+            <span>03.</span> My Work
           </p>
           <div className="line"></div>
         </div>
@@ -25,32 +28,24 @@ function Work({ workElement }) {
             </div>
           </div>
           <div className="work-info">
-            <p>Featured project</p>
-            <p>Project Name</p>
+            <p>Highlighted project</p>
+            <p>{highlightedProject.projectName}</p>
             <div className="text-container">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur{" "}
-                <a className="link-style" href="">
-                  adipisicing
-                </a>{" "}
-                elit. Quod, neque sit. Aliquid esse sed, aperiam quia facere, at
-                alias eveniet voluptatum laborum!
-              </p>
+              <p>{highlightedProject.desc}</p>
             </div>
             <div className="technology-list">
-              <div>VS Code</div>
-              <div>React</div>
-              <div>Express</div>
-              <div>Heroku</div>
+              {highlightedProject.technologies.map((t, i) => (
+                <div key={i}>{t}</div>
+              ))}
             </div>
             <div className="links-list">
               <div>
-                <a href="">
+                <a href={highlightedProject.gitHubLink}>
                   <div>
                     <FiGithub fontSize="20px" />
                   </div>
                 </a>
-                <a href="">
+                <a href={highlightedProject.appLink}>
                   <div>
                     <FontAwesomeIcon icon={faExternalLinkAlt} size="1x" />
                   </div>

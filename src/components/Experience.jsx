@@ -79,7 +79,7 @@ function Experience({ experienceElement }) {
       <div className="experience-container" ref={experienceElement}>
         <div className="experience-title">
           <p>
-            <span>02.</span> Where I've Worked
+            <span>02.</span> My Jobs
           </p>
           <div className="line"></div>
         </div>

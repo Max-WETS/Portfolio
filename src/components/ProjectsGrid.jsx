@@ -10,7 +10,7 @@ function ProjectsGrid({ projectsElement }) {
     <div className="projects-grid-section" ref={projectsElement}>
       <div className="projects-container">
         <div className="projects-title">
-          <p>Other Noteworthy Projects</p>
+          <p>List of Projects</p>
         </div>
         <div className="projects-grid-container">
           <div className="grid-row">
