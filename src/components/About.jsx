@@ -68,7 +68,7 @@ function About({ aboutElement }) {
         <div className="about-picture">
           <div className="picture-container">
             <div className="image-overlay">
-              <img src="../pp-pro-fit.jpeg" alt="" />
+              <img src="pp-pro-fit.jpeg" alt="" />
             </div>
           </div>
         </div>

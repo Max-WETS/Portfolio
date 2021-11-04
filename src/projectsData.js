@@ -8,8 +8,8 @@ const projectsData = [
   },
   {
     projectName: "MaxWeb",
-    desc: "A Facebook-like social app built from scratch and featuring its most widespread functionalities: login, registering, posting, managing friends status, along with a chat and an admin page.",
-    technologies: ["React", "Chakra-UI", "Express", "MongoDB"],
+    desc: "A Facebook-like social app built from scratch and featuring its most widespread functionalities: login, registering, posting, managing friends, plus a chat and an admin page.",
+    technologies: ["React", "Express", "MongoDB"],
     gitHubLink: "https://github.com/Max-WETS/SocialApp",
     appLink: "https://maxweb21.herokuapp.com/login",
   },
