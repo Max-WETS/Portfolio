@@ -132,11 +132,39 @@ img {
 }
 
 @media(max-width: 750px) {
-    .about-picture {
-        display: none;
+    // .about-picture {
+    //     display: none;
+    // }
+    #about {
+        min-height: 120vh;
+        box-sizing: content-box;
+    }
+    .about-container {
+        flex-direction: column;
+        box-sizing: content-box;
     }
     .about-text {
         width: 100%;
+    }
+    .about-picture {
+        box-sizing: content-box;
+        width: 100%;
+        padding: 1.0rem 0 1.0rem 0;
+    }
+    .picture-container {
+        width: 38vw;
+        height: 38vw;
+    }
+}
+
+@media(max-width: 400px) {
+    #about {
+        min-height: 150vh;
+    }
+
+    .picture-container {
+        width: 15rem;
+        height: 15rem;
     }
 }
 

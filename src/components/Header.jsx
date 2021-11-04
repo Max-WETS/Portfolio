@@ -102,6 +102,25 @@ function Header({ menuOpen, setMenuOpen }) {
                   Contact
                 </a>
               </li>
+              <li>
+                <a
+                  href="../resume.pdf"
+                  style={{
+                    textDecoration: "none",
+                    color: "black",
+                  }}
+                >
+                  <div
+                    className="resume-link"
+                    style={{
+                      fontSize: "1.3rem",
+                      width: "4.7rem",
+                    }}
+                  >
+                    <p>Resume</p>
+                  </div>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
