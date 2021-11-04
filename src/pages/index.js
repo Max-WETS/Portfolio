@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import "../styles/index.scss";
 import Portfolio from "./Portfolio";
 import Helmet from "react-helmet";
@@ -14,8 +14,32 @@ const IndexPage = () => {
   const [isLoadingStarted, setIsLoadingStarted] = useState(false);
   const [isLoadingEnding, setIsLoadingEnding] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const documentHeight = useRef();
 
   const isBrowser = typeof window !== "undefined";
+
+  const checkWindowHeight = useCallback(() => {
+    const htmlElement = document.getElementsByTagName("html")[0];
+    const documentHeight = htmlElement.offsetHeight;
+    document.documentElement.style.setProperty(
+      "--documentHeight",
+      `${documentHeight}px`
+    );
+  });
+
+  useEffect(() => {
+    if (isBrowser) {
+      checkWindowHeight();
+    }
+  }, [isBrowser, checkWindowHeight]);
+
+  useEffect(() => {
+    window.addEventListener("resize", checkWindowHeight);
+
+    return () => {
+      window.removeEventListener("resize", checkWindowHeight);
+    };
+  }, [checkWindowHeight]);
 
   useEffect(() => {
     if (isBrowser) {
