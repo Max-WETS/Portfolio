@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import "../styles/index.scss";
 import Portfolio from "./Portfolio";
 import Helmet from "react-helmet";
-import fontawesome from "@fortawesome/fontawesome";
-import FontAwesomeIcon from "@fortawesome/react-fontawesome";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import fontawesomeStyle from "@fortawesome/fontawesome-svg-core/styles.css";
+config.autoAddCss = false;
 
 const primaryColor = "white";
 
@@ -45,13 +46,10 @@ const IndexPage = () => {
     setMenuOpen(!menuOpen);
   };
 
-  // fontawesome.config = { autoAddCss: false };
-
   return (
     <>
       <Helmet>
         <title>Maxime Wets</title>
-        <style>{fontawesome.dom.css()}</style>
       </Helmet>
       <div
         className={
