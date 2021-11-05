@@ -119,3 +119,15 @@ article {
   100% { top:0; opacity: 1;}
 }
 
+@media(max-width: 450px) {
+  .body-overlay-menu-open {
+  z-index: 3;
+  opacity: 0.8;
+  width: 68vw;
+  height: var(--documentHeight);
+}
+.html-menu-open { 
+  margin-right: 0px;
+}
+}
+

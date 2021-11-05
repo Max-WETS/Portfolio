@@ -171,3 +171,16 @@
     }
 
 }
+
+@media(max-width: 350px) {
+  .experience-title p:first-child {
+    font-size: 1.3rem;
+ }
+  .job-info p:first-child {
+      font-size: 1.0rem;
+      margin-top: 1.5rem;
+  }
+  .company-list ul::before {
+      width: 96px;
+  }
+}

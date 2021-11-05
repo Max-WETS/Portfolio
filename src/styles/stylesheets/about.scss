@@ -168,3 +168,16 @@ img {
     }
 }
 
+@media(max-width: 350px) {
+  .about-text p:first-child {
+    font-size: 1.3rem;
+ }
+  #about {
+      min-height: 172vh;
+  }
+  .picture-container {
+      width: 12rem;
+      height: 12rem;
+  }
+}
+

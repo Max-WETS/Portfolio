@@ -52,21 +52,28 @@ function Experience({ experienceElement }) {
 
   useEffect(() => {
     let viewportWidth = window.innerWidth;
-    if (
-      document.documentElement.style.getPropertyValue("--transition") === "0s"
-    )
-      document.documentElement.style.setProperty("--transition", "0.3s");
-
-    if (viewportWidth > breakingPoint) {
+    if (viewportWidth < 350) {
       document.documentElement.style.setProperty(
         "--h",
-        currentExperience * 3 + "rem"
+        currentExperience * 96 + "px"
       );
     } else {
-      document.documentElement.style.setProperty(
-        "--h",
-        currentExperience * 6.5 + "rem"
-      );
+      if (
+        document.documentElement.style.getPropertyValue("--transition") === "0s"
+      )
+        document.documentElement.style.setProperty("--transition", "0.3s");
+
+      if (viewportWidth > breakingPoint) {
+        document.documentElement.style.setProperty(
+          "--h",
+          currentExperience * 3 + "rem"
+        );
+      } else {
+        document.documentElement.style.setProperty(
+          "--h",
+          currentExperience * 6.5 + "rem"
+        );
+      }
     }
   }, [currentExperience]);
 

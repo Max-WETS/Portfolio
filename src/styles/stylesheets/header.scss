@@ -260,7 +260,6 @@
 .menu-open:before {
     content: "";
     position: absolute;
-    position: absolute;
     top: 0;
     left: 0;
     height: 100vh;
@@ -271,5 +270,22 @@
   display: flex;
   justify-content: center;
   margin-top: 1rem;
+}
+
+@media(max-width: 450px) {
+  .header-container {
+    backdrop-filter: blur(0px);
+    opacity: 1;
+    background-color: $primary-color;
+  }
+  .menu {
+    right: 0%;
+  }
+}
+
+@media(max-width: 350px) {
+  .menu > div a {
+    font-size: 1.1rem;
+  }
 }
 

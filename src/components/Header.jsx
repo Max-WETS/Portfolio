@@ -37,7 +37,7 @@ function Header({ menuOpen, setMenuOpen }) {
           : "header-container hidden-header"
       }
     >
-      <a href="http://localhost:8000/">
+      <a href="https://www.maxwets.fr/">
         <div className="logo-main">
           <svg
             width="50"

@@ -189,3 +189,12 @@
     color: $fourth-color;
     font-size: 0.9rem;
 }
+
+@media(max-width: 350px) {
+  .projects-title p:first-child {
+    font-size: 1.3rem;
+ }
+ .grid-item {
+   height: 22rem;
+ }
+}

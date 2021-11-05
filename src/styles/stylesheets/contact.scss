@@ -46,3 +46,9 @@
 .contact-container a:hover {
     background-color: $tertiary-color;
 }
+
+@media(max-width: 350px) {
+  .contact-container p:nth-child(2) {
+    font-size: 1.4rem;
+ }
+}

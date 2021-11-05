@@ -242,3 +242,12 @@
 .work-content > div:first-child {
     display: none;
 }
+
+@media(max-width: 350px) {
+  .work-title p:first-child {
+    font-size: 1.3rem;
+ }
+  #work {
+    height: 87vh;
+ }
+}
